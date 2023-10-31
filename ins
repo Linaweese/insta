@@ -22,30 +22,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         postImage = findViewById(R.id.postImage);
-        loadImageButton = findViewById(R.id.loadImageButton);
+        loadImageButton = findViewById(R.id.loaitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);dImageButton);
 
         loadImageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            @Overrideitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+            public void onClick(View view) {itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
                 // Открывает галерею для выбора изображения
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE);
+                startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE);itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
             }
         });
-    }
+    }itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);able Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == GALLERY_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             Uri selectedImageUri = data.getData();
             try {
                 // Загружает выбранное изображение в ImageView с помощью библиотеки Picasso
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
-                postImage.setImageBitmap(bitmap);
+                postImage.setImageBitmap(bitmap);itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }itmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
         }
     }
 }
